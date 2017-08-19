@@ -15,7 +15,7 @@ echo 'hello git' | git hash-object -w --stdin
 ```
 
 ```shell
-d67
+8d0e41234f24b6da002d962a26c2495ea16a425f
 ```
 
 
