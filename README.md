@@ -9,17 +9,14 @@
 - [ ] Git 如何创建 branch
 - [ ] Git 如何创建 tag
 
-# 写入内容到 Git
+## 写入内容到 Git
 ```shell
-echo 'hello git' | git hash-object -w --stdin
-```
-
-```shell
+echo 'hello git' | git hash-object -w --stdin # -w:写入到 .git/objects 不加 -w 仅返回 SHA-1 ，不会写入内容。
 8d0e41234f24b6da002d962a26c2495ea16a425f
 ```
 
 
-# 保存文件到 Git
+## 保存文件到 Git
 
 # Git 命令分类
 * Porcelain（简化【瓷器】命令：对内部命令集的封装）
