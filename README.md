@@ -12,17 +12,34 @@
 ## 写入内容到 Git
 ```shell
 $ echo 'hello git' | git hash-object -w --stdin # -w:写入到 .git/objects 不加 -w 仅返回 SHA-1 ，不会写入内容。
-$ 8d0e41234f24b6da002d962a26c2495ea16a425f
+8d0e41234f24b6da002d962a26c2495ea16a425f
 ```
-目录变化：
+`.git` 目录的变化：
 ```shell
 ├── objects
 │   ├── 8d
 │   │   └── 0e41234f24b6da002d962a26c2495ea16a425f
 ```
-
+取回数据：
+```shell
+$ git cat-file -p 8d0e41234f24b6da002d962a26c2495ea16a425f
+hello git 
+```
 
 ## 保存文件到 Git
+```shell
+$ echo 'mike test 1' > 1.txt
+$ git hash-object -w 1.txt
+86c83dd5aac33fc5817430360fac8dcace9037f6
+```
+`.git/objects` 目录的变化：
+```shell
+├── objects
+│   ├── 86
+│   │   └── c83dd5aac33fc5817430360fac8dcace9037f6
+│   ├── 8d
+│   │   └── 0e41234f24b6da002d962a26c2495ea16a425f
+```
 
 # Git 命令分类
 * Porcelain（简化【瓷器】命令：对内部命令集的封装）
