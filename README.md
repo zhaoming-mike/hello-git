@@ -1,12 +1,10 @@
-# 本项目针对Pro Git的最后一章中的内容进行测试
+# Git 内部原理
 
 
-## 包括
-	* Plumbing 命令
-	* Porcelain 命令
+## Git 命令
+* Plumbing 命令
+* Porcelain 命令
 
 ### Git 对象
-
-	1. blob 对象
-	1. tree 对象
-	1. commit object 提交对象
+1. blob 对象（存放数据）
+1. tree 对象（存放目录）
