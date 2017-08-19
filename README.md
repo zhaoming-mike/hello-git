@@ -11,8 +11,14 @@
 
 ## 写入内容到 Git
 ```shell
-echo 'hello git' | git hash-object -w --stdin # -w:写入到 .git/objects 不加 -w 仅返回 SHA-1 ，不会写入内容。
-8d0e41234f24b6da002d962a26c2495ea16a425f
+$ echo 'hello git' | git hash-object -w --stdin # -w:写入到 .git/objects 不加 -w 仅返回 SHA-1 ，不会写入内容。
+$ 8d0e41234f24b6da002d962a26c2495ea16a425f
+```
+目录变化：
+```shell
+├── objects
+│   ├── 8d
+│   │   └── 0e41234f24b6da002d962a26c2495ea16a425f
 ```
 
 
