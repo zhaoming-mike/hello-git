@@ -14,7 +14,7 @@
 $ echo 'hello git' | git hash-object -w --stdin # -w:写入到 .git/objects 不加 -w 仅返回 SHA-1 ，不会写入内容。
 8d0e41234f24b6da002d962a26c2495ea16a425f
 ```
-`.git` 目录的变化：
+`.git/objects` 目录的变化：
 ```shell
 ├── objects
 │   ├── 8d
@@ -22,7 +22,7 @@ $ echo 'hello git' | git hash-object -w --stdin # -w:写入到 .git/objects 不�
 ```
 取回数据：
 ```shell
-$ git cat-file -p 8d0e41234f24b6da002d962a26c2495ea16a425f
+$ git cat-file -p 8d0e41234f24b6da002d962a26c2495ea16a425f # -p:友好打印
 hello git 
 ```
 
@@ -43,7 +43,7 @@ $ git hash-object -w 1.txt
 
 # Git 命令分类
 * Porcelain（简化【瓷器】命令：对内部命令集的封装）
-* Plumbing （内部【棒槌】命令：git plumbing 是一组内部命令集）
+* Plumbing（内部【棒槌】命令：git plumbing 是一组内部命令集）
 
 # Git 对象分类
 1. blob 对象（存放数据）
