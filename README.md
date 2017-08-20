@@ -96,4 +96,4 @@ mike test 2
 1. tree 对象（存放目录）
 
 # 联系我
-[我的二维码](#1)
+[我的二维码](https://github.com/zhaoming-mike/hello-git/issues/1)
