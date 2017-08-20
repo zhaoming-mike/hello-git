@@ -102,7 +102,7 @@ $ git hash-object -w 1.txt
 ```
 
 ```shell
-$ git update-index --add --cacheinfo 100644 243fd7fd14b11b461797817a77e855e454736049 1.txt # 写入暂存区：index
+$ git update-index --add --cacheinfo 100644 243fd7fd14b11b461797817a77e855e454736049 1.txt # 写入暂存
 $ git write-tree # 将暂存区写入 ".git/objects"
 d79fe6c438b12ce920210e61abcbf531838a7d4d
 $ git cat-file -p d79f # tree 对象：模式（100644、100755、120000、040000、etc...）、类型、SHA-1、文件名
