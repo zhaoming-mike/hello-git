@@ -31,6 +31,9 @@ hello git
 $ echo 'mike test 1' > 1.txt
 $ git hash-object -w 1.txt
 86c83dd5aac33fc5817430360fac8dcace9037f6
+$ echo 'mike test 2' > mike-tmp/2.txt
+$ git hash-object -w mike-tmp/2.txt
+aa4e1b6b680e8b06c1a998e2e8424dc62209071b
 ```
 `.git/objects` 目录的变化：
 ```shell
@@ -39,6 +42,8 @@ $ git hash-object -w 1.txt
 │   │   └── c83dd5aac33fc5817430360fac8dcace9037f6
 │   ├── 8d
 │   │   └── 0e41234f24b6da002d962a26c2495ea16a425f
+│   ├── aa
+│   │   └── 4e1b6b680e8b06c1a998e2e8424dc62209071b
 ```
 
 # Git 命令分类
