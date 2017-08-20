@@ -5,7 +5,7 @@
 # 从一个文件说起
 - [x] [内容的保存](#git-命令分类)
 - [x] [目录的保存](#git-对象分类)
-- [ ] 提交如何保存
+- [x] [提交如何保存](#提交如何保存)
 - [ ] Git 如何创建 branch
 - [ ] Git 如何创建 tag
 
@@ -133,7 +133,11 @@ $ git cat-file -p e4ad
 100644 blob da4d32c613775592eb6ace06fbff04253b57268a	1.txt
 100644 blob fa49b077972391ad58037050f2a75f74e3671e92	new.txt
 040000 tree d79fe6c438b12ce920210e61abcbf531838a7d4d	ver1
+```
 
+# 提交如何保存
+
+```shell
 $ echo "commit 1" | git commit-tree d79f # 模拟一次 ver1 目录的提交
 d3258f685a60528534c7cef572967e601da393b8
 $ git cat-file -p d3258
@@ -149,6 +153,8 @@ $ echo "commit 3" | git commit-tree e4ad -p cf9307
 c4073ce63780452cfcee86f926d719daa751538a
 $ git log --stat c407 # 查看以上我们用底层命令实现的这几次提交信息，这跟用 git add 、git commit 效果是等价的
 ```
+
+# 模拟的提交日志
 
 ```shell
 commit c4073ce63780452cfcee86f926d719daa751538a
@@ -179,6 +185,8 @@ Date:   Sun Aug 20 21:44:42 2017 +0800
  1.txt | 1 +
  1 file changed, 1 insertion(+)
 ```
+
+# 此时 Git 数据库中保存的内容
 
 ```shell
 ├── objects
