@@ -22,11 +22,11 @@ $ echo 'hello git' | git hash-object -w --stdin # -w:写入到 .git/objects 不�
 ```
 取回数据：
 ```shell
-$ git cat-file -p 8d0e41234f24b6da002d962a26c2495ea16a425f # -p:友好打印
+$ git cat-file -p 8d0e41234f24b6da002d962a26c2495ea16a425f # -p:友好格式打印
 hello git 
 ```
 
-## 保存文件到 Git
+## 保存文件内容到 Git
 ```shell
 $ echo 'mike test 1' > 1.txt
 $ git hash-object -w 1.txt
@@ -44,6 +44,17 @@ aa4e1b6b680e8b06c1a998e2e8424dc62209071b
 │   │   └── 0e41234f24b6da002d962a26c2495ea16a425f
 │   ├── aa
 │   │   └── 4e1b6b680e8b06c1a998e2e8424dc62209071b
+```
+取回数据：
+```shell
+$ git cat-file -p aa4 # 可以缩写 SHA-1 ，但至少要4位，否则无法返回数据。😄
+fatal: Not a valid object name aa4
+$ git cat-file -p aa4e
+mike test 2
+$ git cat-file -t aa4e # -t: 查看数据的类型
+blob
+$ git cat-file -s aa4e # -s: 查看数据的大小（字符数还要外加一个LF）
+12
 ```
 
 # Git 命令分类
