@@ -69,6 +69,22 @@ blob
 
 $ git cat-file -s aa4e # -s: 查看数据的大小（字符数还要外加一个LF）
 12
+
+$ git cat-file --batch-check --batch-all-object # --batch-check:不输出内容，仅显示 "<SHA-1> <type> <size> LF" 列表
+86c83dd5aac33fc5817430360fac8dcace9037f6 blob 12
+8d0e41234f24b6da002d962a26c2495ea16a425f blob 10
+aa4e1b6b680e8b06c1a998e2e8424dc62209071b blob 12
+
+$ git cat-file --batch --batch-all-object # --batch:从 stdin 读 SHA-1 的交互模式 --batch-all-object:全量输出
+86c83dd5aac33fc5817430360fac8dcace9037f6 blob 12
+mike test 1
+
+8d0e41234f24b6da002d962a26c2495ea16a425f blob 10
+hello git
+
+aa4e1b6b680e8b06c1a998e2e8424dc62209071b blob 12
+mike test 2
+
 ```
 
 # Git 命令分类
