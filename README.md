@@ -209,3 +209,6 @@ Date:   Sun Aug 20 21:44:42 2017 +0800
 # Git 对象分类
 1. blob 对象（存放数据）
 1. tree 对象（存放目录）
+
+# 联系我
+[我的二维码](https://github.com/zhaoming-mike/hello-git/issues/1)
